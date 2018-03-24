@@ -1,6 +1,6 @@
 {
   "name": "easy-lazy",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple image lazy loading script",
   "main": "index.js",
   "scripts": {
