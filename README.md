@@ -1,6 +1,9 @@
 Easy Lazy Image Loader
 ===
 
+Based upon Robin Osbornes lazy loading technique. This is an ES6-updated
+alternative with configuration options.
+
 ## Use
 
 ```html
@@ -13,21 +16,39 @@ const lazy = Lazy({
   attrName: 'data-src'
 
 })
+
 lazy.init()
 
-or with default configuration
+// If you use the default configuration you don't need to pass any options.
 
 Lazy().init()
 ```
 
-## Configure
+## Configuration
 
-There are two configuration options.
+Lazy() accepts a configuration object with the following properties.
 
-### className
+### className (default: 'js-lazy')
 
-The class name of the images to lazy load. Defaults to `js-lazy`.
+The class name of the images to lazy load.
 
-### attrSrc
+### attrSrc (default: 'data-src')
 
-The attribute where the image src lives. Defaults to `data-src`.
+The attribute where the image src lives.
+
+## Transition
+
+Adding a transition is easy using the `.loaded` class.
+
+Here is a simple fade in:
+
+```css
+.js-lazy {
+  opacity: 0;
+  transition: opacity 200ms;
+}
+
+.js-lazy.loaded {
+  opacity: 1;
+}
+```
