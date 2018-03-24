@@ -1,0 +1,18 @@
+{
+  "name": "easy-lazy",
+  "version": "1.0.0",
+  "description": "A simple image lazy loading script",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://github.com/grantschulte/easy-lazy",
+  "keywords": [
+    "lazy",
+    "loading",
+    "images",
+    "performance"
+  ],
+  "author": "Grant J. Schulte <schulte.grant@gmail.com>",
+  "license": "MIT"
+}
