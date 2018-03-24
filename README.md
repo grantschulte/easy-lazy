@@ -1,7 +1,6 @@
-Easy Lazy Image Loader
-===
+# Easy Lazy [![npm version](https://badge.fury.io/js/easy-lazy.svg)](https://badge.fury.io/js/easy-lazy)
 
-Based upon Robin Osbornes lazy loading technique. This is an ES6-updated
+Based on Robin Osborne's lazy loading technique. This is an ES6-updated
 alternative with configuration options.
 
 ## Use
@@ -14,12 +13,11 @@ alternative with configuration options.
 const lazy = Lazy({
   className: 'js-lazy',
   attrName: 'data-src'
-
 })
 
 lazy.init()
 
-// If you use the default configuration you don't need to pass any options.
+// Or use default configuration...
 
 Lazy().init()
 ```
