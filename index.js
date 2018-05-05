@@ -9,7 +9,8 @@ const Lazy = (opts = { className: 'js-lazy', attrName: 'data-src' }) => {
 
       for (let item of this.items) {
         item.setAttribute('data-original-src', item.src)
-        item.addEventListener('load', () => {
+        item.onerror = this.onImageError
+        item.addEventListener('load', (e) => {
           item.classList.add('loaded')
         })
       }
@@ -55,6 +56,10 @@ const Lazy = (opts = { className: 'js-lazy', attrName: 'data-src' }) => {
         rect.top <= height &&
         rect.left <= width
       )
+    },
+
+    onImageError () {
+      this.src = this.getAttribute('data-original-src')
     },
 
     registerListener (eventName, fn) {
